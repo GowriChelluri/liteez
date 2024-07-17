@@ -1,0 +1,31 @@
+/* Gallery.css */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 40px;
+ 
+}
+
+.gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Initially hide the images */
+  animation: fadeIn 1s forwards; /* Apply the fade-in animation */
+  animation-delay: var(--animation-delay); /* Use a custom property for delay */
+  transition: transform 0.2s;
+ margin-right:15px
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
